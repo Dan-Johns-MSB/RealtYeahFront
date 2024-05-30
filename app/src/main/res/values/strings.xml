@@ -1,0 +1,279 @@
+<resources>
+    <!-- Toolbar menu options -->
+    <string name="main_menu_option_1">Головна</string>
+    <string name="main_menu_option_2">Клієнти</string>
+    <string name="main_menu_option_3">Нерухомість</string>
+    <string name="main_menu_option_4">Операції</string>
+    <string name="main_menu_option_5">Співробітники</string>
+    <!-- ///Toolbar menu options -->
+
+    <string name="app_name">preThesisPractice</string>
+    <string name="company_name">RealtYEAH!</string>
+    <string name="unnamed_employee">Unnamed</string>
+    <string name="empty_string"></string>
+    <string name="invalid_username">Неправильний логін</string>
+    <string name="invalid_password">Неправильний пароль</string>
+    <string name="invalid_password_repeat">Неправильне повторення паролю</string>
+    <string name="enter_login_description">Введіть ваш username</string>
+    <string name="enter_password_description">Введіть ваш пароль</string>
+    <string name="login_form_header">ВХІД</string>
+    <string name="login_button_text">Увійти</string>
+    <string name="logout_button_text">Вийти з акаунта</string>
+    <string name="main_page_job_info_title">Посада:</string>
+    <string name="main_page_job_info_text">генеральний директор</string>
+    <string name="main_page_birthdate_title">Дата народження:</string>
+    <string name="main_page_birthdate">01.01.1970</string>
+    <string name="main_page_hiredate_title">Дата влаштування:</string>
+    <string name="main_page_hiredate">01.01.1989</string>
+    <string name="main_page_promotion_date_title">На посаді з:</string>
+    <string name="main_page_promotion_date">01.01.1989</string>
+    <string name="main_page_menu_title_1">КЛІЄНТИ</string>
+    <string name="main_page_menu_title_2">НЕРУХОМІСТЬ</string>
+    <string name="main_page_menu_title_3">ОПЕРАЦІЇ</string>
+    <string name="main_page_menu_title_4">СПІВРОБІТНИКИ</string>
+    <string name="main_page_short_description">З чого все починається</string>
+    <string name="clients_page_short_description">База клієнтів та інформації щодо них - у вашому смартфоні</string>
+    <string name="clients_page_description">Ведіть облік клієнтів, інформації щодо них, об\'єктів, пов\'язаних з клієнтами, документів, вимог та побажань від клієнтів щодо купівлі, продажу, оренди чи здачі в оренду, та історію операцій з клієнтами</string>
+    <string name="objects_page_short_description">І вся клієнтська нерухомість також завітала до вас у смартфон!</string>
+    <string name="objects_page_description">Ведіть облік об\'єктів нерухомості та пов\'язаних з ними клієнтів, а також історію операцій</string>
+    <string name="operations_page_short_description">А на коли ту зустріч призначити?</string>
+    <string name="operations_page_description">Ведіть календар операцій, призначайте їх на конкретні дати та час, плануйте графік разом з колегами</string>
+    <string name="analytics_page_short_description">Як справи у інших?</string>
+    <string name="user_info_dropdown_button">Показати особисту інформацію</string>
+    <string name="clients_page_to_buy_redirect_button">Клієнти щодо купівлі</string>
+    <string name="clients_page_to_sell_redirect_button">Клієнти щодо продажу</string>
+    <string name="clients_page_to_rent_redirect_button">Клієнти щодо оренди</string>
+    <string name="clients_page_for_rent_redirect_button">Клієнти щодо здачі в оренду</string>
+    <string name="clients_page_others_redirect_button">Інші та минулі клієнти</string>
+    <string name="clients_search_page_add_client_button">Додати клієнта</string>
+    <string name="clients_search_page_search_option_names">Шукати в іменах:</string>
+    <string name="clients_search_page_search_option_phone_numbers">Шукати в номерах телефонів:</string>
+    <string name="clients_search_page_search_option_emails">Шукати в email:</string>
+    <string name="clients_search_page_search_option_objects_addresses">Шукати в адресах пов\'язаних об\'єктів:</string>
+
+    <!-- Clients Detailed Activity -->
+    <string name="clients_search_page_found_passport_title">Номер паспорта:</string>
+    <string name="clients_search_page_found_address_of_latest_related_object_title">Адреса останнього пов\'язаного об\'єкта:</string>
+    <string name="clients_search_page_found_phone_number_title">Номер телефону:</string>
+    <string name="clients_search_page_found_status_title">Статус:</string>
+    <string name="clients_search_page_found_more_info">Докладніше про клієнта(натисніть на форму)</string>
+    <string name="clients_info_page_taxpayer_card_number_title">РНОКПП:</string>
+    <string name="clients_info_page_email_title">Email:</string>
+    <string name="clients_info_page_birthdate_title">Дата народження:</string>
+    <string name="clients_info_page_birthplace_title">Місце народження:</string>
+    <string name="clients_info_page_gender_title">Стать:</string>
+    <string name="client_info_documents_container_title">Пов\'язані документи</string>
+    <string name="client_info_related_objects_title">Пов\'язані об\'єкти</string>
+    <string name="client_info_requirements_container_title">Вимоги та побажання</string>
+    <string name="client_info_operations_container_title">Історія операцій</string>
+    <string name="client_info_buy_requirements_button">Стосовно купівлі</string>
+    <string name="client_info_sell_requirements_button">Стосовно продажу</string>
+    <string name="client_info_to_rent_requirements_button">Стосовно оренди</string>
+    <string name="client_info_for_rent_requirements_button">Стосовно здачі в оренду</string>
+    <string name="client_info_edit_client_button">Редагувати дані щодо клієнта</string>
+    <string name="watch_documents_button">Переглянути пов\'язані документи</string>
+    <string name="watch_objects_button">Переглянути пов\'язані об\'єкти</string>
+    <string name="watch_operations_button">Переглянути пов\'язані операції</string>
+    <string name="delete_client_button">Видалити клієнта</string>
+    <string name="delete_client_message">Видалення клієнта потягне за собою видалення всіх операцій,
+                                         пов\'язаних з ним. Ви впевнені?</string>
+    <!-- ///Clients Detailed Activity -->
+
+    <!-- Operations Activity -->
+    <string name="operations_add_op_button">Додати операцію</string>
+    <string name="operations_search_op_button">Показати операції</string>
+    <string name="operations_check_only_my_op">Показати тільки операції, де я є хостом</string>
+    <!-- ///Operations Activity -->
+
+    <!-- Operations Detailed Activity -->
+    <string name="detailed_op_date_title">Дата операції:</string>
+    <string name="detailed_op_type_title">Тип операції:</string>
+    <string name="detailed_op_client_title_1">Контрагент 1:</string>
+    <string name="detailed_op_client_title_2">Контрагент 2:</string>
+    <string name="detailed_op_object_title">Адреса\nпов\'язаного\nоб\'єкта:</string>
+    <string name="detailed_op_realtor_title">Хост:</string>
+    <string name="detailed_op_status_title">Статус операції:</string>
+    <string name="operations_page_conductor_title">Хто проводить:</string>
+    <string name="operations_create_next_button">Створити наступну операцію</string>
+    <string name="operations_watch_docs_button">Проглянути пов\'язані документи</string>
+    <string name="operations_begin_buy_button">Договір про надання рієлторських послуг(купівля)</string>
+    <string name="operations_begin_sell_button">Договір про надання рієлторських послуг(продаж)</string>
+    <string name="operations_begin_rent_button">Договір про надання рієлторських послуг(оренда)</string>
+    <string name="operations_begin_for_rent_button">Договір про надання рієлторських послуг(здача в оренду)</string>
+    <string name="operations_object_check_button">Зафіксувати огляд об\'єкта</string>
+    <string name="operations_pledge_button">Попередній договір з внесенням застави</string>
+    <string name="operations_final_button">Фінальний акт купівлі/продажу/оренди/здачі в оренду(акт здачі-прийому робіт)</string>
+    <string name="operations_cancel_op_button">Зрив операції/Відміна операції</string>
+    <string name="operations_delete_op_button">Видалити операцію</string>
+    <string name="cancel_op_message">Відміна/зрив операції означає відміну одного з актів(договір про надання рієлторських послуг,
+                                     попередній договір, фінальний акт) в залежності, який з них був попередньо створений
+                                     на даній операції. Відповідно, клієнтам та об\'єктам, задіяних в операції, повертаються
+                                     параметри станом на до моменту створення акту, що зривається(включно статуси та власники об\'єктів).
+                                     Після відміни операція отримає статус НЕУСПІШНО та залишиться в логах.
+                                     Ви дійсно бажаєте відмінити операцію?</string>
+    <string name="delete_op_message">Видалення операції означає її повне зникнення з бази.
+                                     Ви дійсно бажаєте видалити операцію?</string>
+    <!-- ///Operations Detailed Activity -->
+
+    <!-- Operations titles -->
+    <string name="client_info_operation_date_title">Дата операції:</string>
+    <string name="operations_object_address_title">Адреса\nпов\'язаного\nоб\'єкта:</string>
+    <string name="operations_more_info_title">Натисніть для деталей</string>
+    <string name="create_op_name_title">Назва операції</string>
+    <string name="create_op_date_title">Дата операції</string>
+    <string name="create_op_time_title">Час операції</string>
+    <string name="create_op_client_title_1">Контрагент 1</string>
+    <string name="create_op_client_title_2">Контрагент 2</string>
+    <string name="create_op_object_title">Об\'єкт</string>
+    <string name="create_op_host_title">Хост</string>
+    <string name="create_op_button">Створити операцію</string>
+    <!-- ///Operations titles -->
+
+    <!-- AlertDialog's button titles -->
+    <string name="alert_dialog_ok">ОК</string>
+    <string name="alert_dialog_goBack">Назад</string>
+    <!-- ///AlertDialog's button titles -->
+
+    <!-- Employee Search Activity -->
+    <!-- Adapter Layout -->
+    <string name="host_adapter_job_title">Посада:</string>
+    <string name="host_adapter_phone_number_title">Номер телефону:</string>
+    <string name="host_adapter_email_title">Email:</string>
+    <!-- ///Adapter Layout -->
+    <!-- ///Employee Search Activity -->
+
+    <!-- Create Operation Activity -->
+    <string name="not_chosen">Не обрано</string>
+    <string name="pick_client_button">Обрати клієнта</string>
+    <string name="pick_object_button">Обрати об\'єкт</string>
+    <string name="pick_host_button">Обрати хоста</string>
+    <!-- ///Create Operation Activity -->
+
+    <!-- Objects Search Activity -->
+    <string name="objects_search_page_add_object_button">Додати об\'єкт</string>
+    <string name="objects_search_page_search_in_types">Шукати в типах:</string>
+    <string name="objects_search_page_search_in_addresses">Шукати в адресах:</string>
+    <string name="objects_search_page_search_in_clients">Шукати в клієнтах:</string>
+    <!-- ///Objects Search Activity -->
+
+    <!-- Operation statuses -->
+    <string name="operation_status_fail">Неуспішно</string>
+    <string name="operation_status_success">Успішно</string>
+    <string name="operation_status_wait">Очікується</string>
+    <!-- ///Operation statuses -->
+
+    <!-- Objects Activity -->
+    <string name="objects_page_to_sell_redirect_button">Об\'єкти на продаж</string>
+    <string name="objects_page_for_rent_redirect_button">Об\'єкти на здачу в оренду</string>
+    <string name="objects_page_others_redirect_button">Інші та архівовані об\'єкти</string>
+    <!-- ///Objects Activity -->
+
+    <!-- Objects Detailed Activity -->
+    <string name="clients_objects_info_address_title">Адреса пов\'язаного об\'єкта:</string>
+    <string name="clients_objects_info_type_title">Тип об\'єкта:</string>
+    <string name="clients_objects_info_area_title">Площа об\'єкта(кв.м.):</string>
+    <string name="clients_objects_info_price_title">Вартість об\'єкта($):</string>
+    <string name="clients_objects_info_owner_title">Останній власник:</string>
+    <string name="object_address_title">Адреса:</string>
+    <string name="object_info_owner_title">Власник</string>
+    <string name="watch_owner_button">Переглянути власника</string>
+    <string name="object_info_potential_clients_title">Потенційні покупці/орендарі</string>
+    <string name="watch_potential_clients_button">Переглянути потенційних покупців/орендарів</string>
+    <string name="object_info_edit_object_button">Редагувати дані щодо об\'єкта</string>
+    <string name="delete_object_button">Видалити об\'єкт</string>
+    <string name="delete_object_message">Видалення об\'єкта потягне за собою видалення всіх операцій,
+                                         пов\'язаних з ним. Ви впевнені?</string>
+    <!-- ///Objects Detailed Activity -->
+
+    <!-- Create Client Activity -->
+    <string name="create_client_name_title">Ім\'я:</string>
+    <string name="create_client_button">Створити клієнта</string>
+    <string-array name="genders">
+        <item>Жіноча</item>
+        <item>Чоловіча</item>
+    </string-array>
+    <!-- ///Create Client Activity -->
+
+    <!-- Create Object Activity -->
+    <string name="create_object_button">Створити об\'єкт</string>
+    <!-- ///Create Object Activity -->
+
+    <!-- Assign Act Activity -->
+    <string name="pick_a_file_message">Оберіть файли</string>
+    <string name="assign_act_button">Створити акт</string>
+    <!-- ///Assign Act Activity -->
+
+    <!-- Placeholders -->
+    <string name="requirement_placeholder">Поле для нотаток</string>
+    <!-- ///Placeholders -->
+
+    <!-- Employees Detailed Activity -->
+    <string name="employee_address_title">Адреса:</string>
+    <string name="employee_birthdate_title">Дата народження:</string>
+    <string name="employee_hiredate_title">Дата влаштування:</string>
+    <string name="employee_promotedate_title">На посаді з:</string>
+    <string name="employee_firedate_title">Дата звільнення:</string>
+    <string name="employee_status_title">Статус:</string>
+    <string name="employee_watch_op_title">Пов\'язані операції</string>
+    <string name="employee_watch_op_button">Переглянути пов\'язані операції</string>
+    <string name="employee_watch_clients_title">Пов\'язані клієнти</string>
+    <string name="employee_watch_clients_button">Переглянути пов\'язаних клієнтів</string>
+    <string name="employee_watch_objects_title">Пов\'язані об\'єкти</string>
+    <string name="employee_watch_objects_button">Переглянути пов\'язані об\'єкти</string>
+    <string name="employee_edit_button">Редагувати робітника</string>
+    <string name="employee_edit_user_button">Редагувати/створити акаунт</string>
+    <string name="employee_fire_saved_button">Звільнити робітника без видалення</string>
+    <string name="employee_fire_completely_button">Звільнити робітника з видаленням</string>
+    <string name="employee_fire_saved_message">Звільнити робітника без видалення означає видалення його акаунту та зміна статусів,
+                                               при цьому дані робітника залишаються у базі даних. Ви впевнені?</string>
+    <string name="employee_fire_completely_message">Звільнити робітника з видаленням означає видалення його акаунту, даних,
+                                                    а також пов\'язаних з ним операцій. Ви впевнені?</string>
+    <!-- ///Employees Detailed Activity -->
+
+    <!-- Create Employee Activity -->
+    <string-array name="employee_statuses">
+        <item>Активний</item>
+        <item>Відсторонений</item>
+        <item>Звільнений</item>
+        <item>На лікарняному</item>
+        <item>У відгулі</item>
+        <item>У відпустці</item>
+    </string-array>
+    <string-array name="employee_roles_ukr">
+        <item>Рієлтор</item>
+        <item>Адміністратор</item>
+        <item>Головний адміністратор</item>
+    </string-array>
+    <string-array name="employee_roles_eng">
+        <item>agent</item>
+        <item>admin</item>
+        <item>mainadmin</item>
+    </string-array>
+    <string name="create_employee_name_title">Ім\'я</string>
+    <string name="create_employee_phone_number_title">Номер телефону</string>
+    <string name="create_employee_job_title">Посада</string>
+    <string name="create_employee_birthdate_title">Дата народження</string>
+    <string name="create_employee_address_title">Адреса</string>
+    <string name="create_employee_hiredate_title">Дата найму</string>
+    <string name="create_employee_promotedate_title">Дата підвищення</string>
+    <string name="create_employee_firedate_title">Дата звільнення</string>
+    <string name="create_employee_status_title">Статус</string>
+    <string name="create_employee_button">Створити робітника</string>
+    <!-- ///Create Employee Activity -->
+
+    <!-- Create User Activity -->
+    <string name="create_user_login_title">Електронна пошта</string>
+    <string name="create_user_password_title">Пароль</string>
+    <string name="create_user_password_repeat_title">Повторення паролю</string>
+    <string name="create_user_role_title">Роль</string>
+    <string name="edit_user_button">Редагувати акаунт</string>
+    <string name="create_user_button">Створити акаунт</string>
+    <!-- ///Create User Activity -->
+
+    <!-- Employees Search Activity -->
+    <string name="add_employee_button">Додати робітника</string>
+    <!-- ///Employees Search Activity -->
+
+    <string name="upload_photo">Оберіть фото</string>
+    <string name="unknown_value">Unknown</string>
+</resources>

@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#105CC5"
+    tools:context=".activities.ClientsDetailedActivity">
+
+    <include
+        android:id="@+id/backgroundLogo"
+        layout="@layout/bg_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <include
+        android:id="@+id/toolbarContainer"
+        layout="@layout/activity_toolbar_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewContainer"/>
+
+    <ScrollView
+        android:id="@+id/scrollViewContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#B3000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarContainer">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrollViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clientInfoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/round_rectangle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/clientInfoPhoto"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/clientInfoPhotoRightGuideline"
+                    app:layout_constraintStart_toStartOf="@+id/clientInfoPhotoLeftGuideline"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_face_24" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/clientInfoPhotoLeftGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.1" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/clientInfoPhotoRightGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.4" />
+
+                <TextView
+                    android:id="@+id/clientInfoName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unknown_value"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/clientInfoPassportInfoContainer"
+                    app:layout_constraintEnd_toStartOf="@+id/clientInfoContainerEndline"
+                    app:layout_constraintStart_toStartOf="@+id/clientInfoPhotoRightGuideline"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/clientInfoContainerEndline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.9" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clientInfoPassportInfoContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/clientInfoTaxpayerInfoContainer"
+                    app:layout_constraintEnd_toStartOf="@+id/clientInfoContainerEndline"
+                    app:layout_constraintStart_toStartOf="@+id/clientInfoPhotoRightGuideline"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoName">
+
+                    <TextView
+                        android:id="@+id/clientInfoPassportTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clients_search_page_found_passport_title"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/clientInfoPassport"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/clientInfoPassport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unknown_value"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/clientInfoPassportTitle"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clientInfoTaxpayerInfoContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/clientInfoPhoneNumberInfoContainer"
+                    app:layout_constraintEnd_toStartOf="@+id/clientInfoContainerEndline"
+                    app:layout_constraintStart_toStartOf="@+id/clientInfoPhotoRightGuideline"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoPassportInfoContainer">
+
+                    <TextView
+                        android:id="@+id/clientInfoTaxpayerCardNumberTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clients_info_page_taxpayer_card_number_title"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/clientInfoTaxpayerCardNumber"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/clientInfoTaxpayerCardNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unknown_value"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/clientInfoTaxpayerCardNumberTitle"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clientInfoPhoneNumberInfoContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintBottom_toTopOf="@id/clientInfoEmailInfoContainer"
+                    app:layout_constraintEnd_toStartOf="@+id/clientInfoContainerEndline"
+                    app:layout_constraintStart_toEndOf="@+id/clientInfoPhotoRightGuideline"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoTaxpayerInfoContainer">
+
+                    <TextView
+                        android:id="@+id/clientInfoPhoneNumberTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clients_search_page_found_phone_number_title"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/clientInfoPhoneNumber"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/clientInfoPhoneNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unknown_value"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/clientInfoPhoneNumberTitle"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clientInfoEmailInfoContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/clientInfoBirthdayInfoContainer"
+                    app:layout_constraintEnd_toStartOf="@+id/clientInfoContainerEndline"
+                    app:layout_constraintStart_toStartOf="@+id/clientInfoPhotoRightGuideline"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoPhoneNumberInfoContainer">
+
+                    <TextView
+                        android:id="@+id/clientInfoEmailTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clients_info_page_email_title"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/clientInfoEmail"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/clientInfoEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unknown_value"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/clientInfoEmailTitle"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clientInfoBirthdayInfoContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/clientInfoBirthplaceInfoContainer"
+                    app:layout_constraintEnd_toStartOf="@+id/clientInfoContainerEndline"
+                    app:layout_constraintStart_toStartOf="@+id/clientInfoPhotoRightGuideline"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoEmailInfoContainer">
+
+                    <TextView
+                        android:id="@+id/clientInfoBirthdateTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clients_info_page_birthdate_title"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/clientInfoBirthdate"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/clientInfoBirthdate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unknown_value"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/clientInfoBirthdateTitle"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clientInfoBirthplaceInfoContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintBottom_toTopOf="@+id/clientInfoGenderInfoContainer"
+                    app:layout_constraintEnd_toStartOf="@+id/clientInfoContainerEndline"
+                    app:layout_constraintStart_toStartOf="@+id/clientInfoPhotoRightGuideline"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoBirthdayInfoContainer">
+
+                    <TextView
+                        android:id="@+id/clientInfoBirthplaceTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clients_info_page_birthplace_title"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/clientInfoBirthplace"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/clientInfoBirthplace"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unknown_value"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/clientInfoBirthplaceTitle"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clientInfoGenderInfoContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/clientInfoContainerEndline"
+                    app:layout_constraintStart_toStartOf="@+id/clientInfoPhotoRightGuideline"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoBirthplaceInfoContainer">
+
+                    <TextView
+                        android:id="@+id/clientInfoGenderTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clients_info_page_gender_title"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/clientInfoGender"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/clientInfoGender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unknown_value"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/clientInfoGenderTitle"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/clientInfoDocumentsContainerTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/client_info_documents_container_title"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clientInfoContainer" />
+
+            <Button
+                android:id="@+id/watchDocumentsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/watch_documents_button"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clientInfoDocumentsContainerTitle" />
+
+            <TextView
+                android:id="@+id/clientInfoRelatedObjectsTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/client_info_related_objects_title"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/watchDocumentsButton" />
+
+            <Button
+                android:id="@+id/watchObjectsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/watch_objects_button"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clientInfoRelatedObjectsTitle" />
+
+            <TextView
+                android:id="@+id/clientInfoRequirementsContainerTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/client_info_requirements_container_title"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/watchObjectsButton" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clientInfoRequirementsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="15dp"
+                android:background="@drawable/standart_rectangle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clientInfoRequirementsContainerTitle">
+
+                <android.widget.Button
+                    android:id="@+id/clientInfoBuyReqButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/standart_rectangle"
+                    android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
+                    android:text="@string/client_info_buy_requirements_button"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clientInfoBuyReqDropdown"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/standart_rectangle"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/clientInfoBuyReqButton"
+                    app:layout_constraintStart_toStartOf="@+id/clientInfoBuyReqButton"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoBuyReqButton"
+                    app:layout_constraintBottom_toTopOf="@+id/clientInfoSellReqButton">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/buyReqRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:nestedScrollingEnabled="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <android.widget.Button
+                    android:id="@+id/clientInfoSellReqButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/standart_rectangle"
+                    android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
+                    android:text="@string/client_info_sell_requirements_button"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoBuyReqDropdown" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clientInfoSellReqDropdown"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/standart_rectangle"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/clientInfoSellReqButton"
+                    app:layout_constraintStart_toStartOf="@+id/clientInfoSellReqButton"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoSellReqButton"
+                    app:layout_constraintBottom_toTopOf="@+id/clientInfoToRentReqButton" >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/sellReqRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:nestedScrollingEnabled="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <android.widget.Button
+                    android:id="@+id/clientInfoToRentReqButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/standart_rectangle"
+                    android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
+                    android:text="@string/client_info_to_rent_requirements_button"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoSellReqDropdown" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clientInfoToRentReqDropdown"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/standart_rectangle"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/clientInfoToRentReqButton"
+                    app:layout_constraintStart_toStartOf="@+id/clientInfoToRentReqButton"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoToRentReqButton"
+                    app:layout_constraintBottom_toTopOf="@+id/clientInfoForRentReqButton">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rentReqRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:nestedScrollingEnabled="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <android.widget.Button
+                    android:id="@+id/clientInfoForRentReqButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/standart_rectangle"
+                    android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
+                    android:text="@string/client_info_for_rent_requirements_button"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoToRentReqDropdown" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clientInfoForRentReqDropdown"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/standart_rectangle"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/clientInfoForRentReqButton"
+                    app:layout_constraintStart_toStartOf="@+id/clientInfoForRentReqButton"
+                    app:layout_constraintTop_toBottomOf="@+id/clientInfoForRentReqButton"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/forRentReqRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:nestedScrollingEnabled="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/clientInfoOperationsContainerTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/client_info_operations_container_title"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clientInfoRequirementsContainer" />
+
+            <Button
+                android:id="@+id/watchOperationsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/watch_operations_button"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clientInfoOperationsContainerTitle" />
+
+            <Button
+                android:id="@+id/clientInfoEditClientButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/client_info_edit_client_button"
+                android:textAllCaps="true"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/watchOperationsButton"
+                app:layout_constraintBottom_toTopOf="@+id/clientInfoDeleteClientButton" />
+
+            <Button
+                android:id="@+id/clientInfoDeleteClientButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:text="@string/delete_client_button"
+                android:textSize="17sp"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clientInfoEditClientButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#105CC5"
+    tools:context=".activities.LoginActivity">
+
+    <include
+        android:id="@+id/backgroundLogo"
+        layout="@layout/bg_logo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:id="@+id/halfTransparentView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#B3000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/loginFormView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/halfTransparentView"
+        app:layout_constraintStart_toStartOf="@+id/halfTransparentView"
+        app:layout_constraintTop_toBottomOf="@+id/loginLogoImageView" />
+
+    <EditText
+        android:id="@+id/inputLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/enter_login_description"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="19.85sp"
+        app:layout_constraintEnd_toEndOf="@+id/loginFormView"
+        app:layout_constraintStart_toStartOf="@+id/loginFormView"
+        app:layout_constraintTop_toBottomOf="@+id/loginFormHeaderTextView" />
+
+    <EditText
+        android:id="@+id/inputPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="@string/enter_password_description"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="19.85sp"
+        app:layout_constraintBottom_toTopOf="@+id/loginSubmitButton"
+        app:layout_constraintEnd_toEndOf="@+id/loginFormView"
+        app:layout_constraintStart_toStartOf="@+id/loginFormView"
+        app:layout_constraintTop_toBottomOf="@+id/inputLogin" />
+
+    <Button
+        android:id="@+id/loginSubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/login_button_text"
+        app:layout_constraintBottom_toBottomOf="@+id/loginFormView"
+        app:layout_constraintEnd_toEndOf="@+id/loginFormView"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/loginFormView" />
+
+    <TextView
+        android:id="@+id/loginFormHeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/login_form_header"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/loginFormView"
+        app:layout_constraintStart_toStartOf="@+id/loginFormView"
+        app:layout_constraintTop_toTopOf="@+id/loginFormView" />
+
+    <ImageView
+        android:id="@+id/loginLogoImageView"
+        android:layout_width="300dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/halfTransparentView"
+        app:layout_constraintTop_toTopOf="@+id/halfTransparentView"
+        app:srcCompat="@drawable/logo_square" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

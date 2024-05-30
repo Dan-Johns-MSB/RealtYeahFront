@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clientFoundContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:background="@drawable/round_rectangle"
+    android:backgroundTintMode="multiply">
+
+    <ImageView
+        android:id="@+id/clientFoundPhoto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/clientFoundImageRightGuideline"
+        app:layout_constraintStart_toStartOf="@+id/clientFoundImageLeftGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_face_24" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/clientFoundImageLeftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/clientFoundImageRightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <TextView
+        android:id="@+id/clientFoundName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/clientFoundPassportInfoContainer"
+        app:layout_constraintEnd_toStartOf="@+id/clientFoundContainerEndline"
+        app:layout_constraintStart_toStartOf="@+id/clientFoundImageRightGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/clientFoundContainerEndline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <TextView
+        android:id="@+id/clientFoundMoreInfoTextfield"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/clients_search_page_found_more_info"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/clientFoundContainerEndline"
+        app:layout_constraintStart_toStartOf="@+id/clientFoundImageRightGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/clientFoundPhoneNumberInfoContainer" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clientFoundPassportInfoContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/clientFoundLatestRelatedObjectAddressInfoContainer"
+        app:layout_constraintEnd_toStartOf="@+id/clientFoundContainerEndline"
+        app:layout_constraintStart_toStartOf="@+id/clientFoundImageRightGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/clientFoundName">
+
+        <TextView
+            android:id="@+id/clientFoundPassportTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/clients_search_page_found_passport_title"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/clientFoundPassport"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/clientFoundPassport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/clientFoundPassportTitle"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clientFoundLatestRelatedObjectAddressInfoContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/clientFoundPhoneNumberInfoContainer"
+        app:layout_constraintEnd_toStartOf="@+id/clientFoundContainerEndline"
+        app:layout_constraintStart_toEndOf="@+id/clientFoundImageRightGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/clientFoundPassportInfoContainer">
+
+        <TextView
+            android:id="@+id/clientFoundLatestRelatedObjectAddressTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/clients_search_page_found_address_of_latest_related_object_title"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/clientFoundLatestRelatedObjectAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/clientFoundLatestRelatedObjectAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/clientFoundLatestRelatedObjectAddressTitle"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clientFoundPhoneNumberInfoContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/clientFoundMoreInfoTextfield"
+        app:layout_constraintEnd_toStartOf="@+id/clientFoundContainerEndline"
+        app:layout_constraintStart_toEndOf="@+id/clientFoundImageRightGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/clientFoundLatestRelatedObjectAddressInfoContainer">
+
+        <TextView
+            android:id="@+id/clientFoundPhoneNumberTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/clients_search_page_found_phone_number_title"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/clientFoundPhoneNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/clientFoundPhoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/clientFoundPhoneNumberTitle"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
